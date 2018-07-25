@@ -1,0 +1,19 @@
+body {
+  background: steelblue;
+  font-family: system-ui, sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+nav {
+  background: sandybrown;
+  display: flex;
+}
+
+nav a {
+  padding: 20px;
+}
+
+nav a.active {
+  background: lime;
+}
