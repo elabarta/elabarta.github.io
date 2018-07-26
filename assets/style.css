@@ -1,3 +1,7 @@
+@-ms-viewport{
+  width: device-width;
+}
+
 body {
   background: #4682b4;
   font-family: system-ui, sans-serif;
@@ -5,9 +9,14 @@ body {
   color: white;
 }
 
+img {
+  max-width: 100%;
+}
+
 nav {
   background: sandybrown;
   display: flex;
+  justify-content: space-around;
 }
 
 nav a {
@@ -19,8 +28,39 @@ nav a {
 
 nav a:hover {
   background: #4682b450;
+  transform: scale(1.2);
+  transition: all .3s ease-in-out;
 }
 
 nav a.active {
   background: lime;
+}
+
+.cardgroup {
+  display: flex;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.card {
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  padding: 20px;
+  border: solid 10px white;
+  margin: 10px;
+  transition: box-shadow 1s, transform 1s;
+}
+
+
+.card:hover {
+ box-shadow: 0 0 0 2.5px rgba(0, 0, 0, 1);
+ animation: vibrate 2s infinite;
+}
+
+@keyframes vibrate {
+ 0% {transform: rotate(0deg);}
+ 33% {transform: rotate(10deg);}
+ 66% {transform: rotate(-10deg);}
+ 100% {transform: rotate(0deg);}
 }
